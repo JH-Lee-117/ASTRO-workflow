@@ -1,0 +1,39 @@
+{
+  "pixel_size_um": 0.151,
+  "image_size_px": 400,
+  "seed": 20261021,
+  "soma_ellipse_radii_px": [
+    24.0,
+    18.0
+  ],
+  "soma_scale_range": [
+    0.85,
+    1.15
+  ],
+  "calibration_note": "LF pooled soma area median 31.853 um2 (n=55); method-defined macro area, not anatomical soma boundary",
+  "process_radius_px": "cell_factor*(1.5 + 9.0*exp(-path_length_um/10))",
+  "cell_factor_range": [
+    0.9,
+    1.1
+  ],
+  "clean": {
+    "psf_sigma_px": 0.8,
+    "gain": 1.0,
+    "background": 18,
+    "bg_variation": 2,
+    "photon_factor": 4.0,
+    "read_noise_sd": 2.0
+  },
+  "moderate": {
+    "psf_sigma_px": 1.3,
+    "gain": 0.76,
+    "background": 24,
+    "bg_variation": 5,
+    "photon_factor": 1.0,
+    "read_noise_sd": 5.0
+  },
+  "validation_sholl": "Fiji reference/test masks only, same soma coordinate, 2-40um step2; independent Fiji GT measurement not performed here",
+  "proximal_brightness": "65*exp(-(radial_distance_um/10)^2), with baseline 145 and soma contribution 90, pre-noise",
+  "revision_note": "v3: LF soma ellipse same as v2; increased proximal process width and brightness; distal width nearly unchanged",
+  "geometry": "Native SWC XY in micrometers, no scaling, soma center (200,200)"
+}
